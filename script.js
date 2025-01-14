@@ -24,8 +24,9 @@ function updateDisplay() {
     document.title = `${minutesStr}:${secondsStr} - Pomodoro Timer`;
 }
 
-function startTimer() {
+function toggleTimer() {
     if (timerId === null) {
+        // Start the timer
         timerId = setInterval(() => {
             timeLeft--;
             updateDisplay();
@@ -38,14 +39,16 @@ function startTimer() {
                 modeText.textContent = isWorkTime ? 'Work Time' : 'Break Time';
                 updateDisplay();
                 alert(isWorkTime ? 'Work Time!' : 'Break Time!');
+                startButton.textContent = 'Start';
             }
         }, 1000);
+        startButton.textContent = 'Pause';
+    } else {
+        // Pause the timer
+        clearInterval(timerId);
+        timerId = null;
+        startButton.textContent = 'Start';
     }
-}
-
-function pauseTimer() {
-    clearInterval(timerId);
-    timerId = null;
 }
 
 function resetTimer() {
@@ -69,8 +72,7 @@ function toggleMode() {
     updateDisplay();
 }
 
-startButton.addEventListener('click', startTimer);
-pauseButton.addEventListener('click', pauseTimer);
+startButton.addEventListener('click', toggleTimer);
 resetButton.addEventListener('click', resetTimer);
 toggleButton.addEventListener('click', toggleMode);
 
