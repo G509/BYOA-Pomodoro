@@ -1,0 +1,59 @@
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f8fafc;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.timer {
+    font-size: 6rem;
+    font-weight: 700;
+    margin: 2.5rem 0;
+    color: #1e293b;
+}
+
+.controls button {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.controls button:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+.mode {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+#toggle-mode {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+#toggle-mode:hover {
+    background-color: #e2e8f0;
+    color: #1e293b;
+} 
