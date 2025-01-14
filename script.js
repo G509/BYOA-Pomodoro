@@ -14,8 +14,14 @@ function updateDisplay() {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
     
-    minutesDisplay.textContent = minutes.toString().padStart(2, '0');
-    secondsDisplay.textContent = seconds.toString().padStart(2, '0');
+    const minutesStr = minutes.toString().padStart(2, '0');
+    const secondsStr = seconds.toString().padStart(2, '0');
+    
+    minutesDisplay.textContent = minutesStr;
+    secondsDisplay.textContent = secondsStr;
+    
+    // Update the page title with the current timer
+    document.title = `${minutesStr}:${secondsStr} - Pomodoro Timer`;
 }
 
 function startTimer() {
