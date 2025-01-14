@@ -59,7 +59,7 @@ function toggleMode() {
     isWorkTime = !isWorkTime;
     timeLeft = isWorkTime ? 25 * 60 : 5 * 60;
     modeText.textContent = isWorkTime ? 'Work Time' : 'Break Time';
-    toggleButton.textContent = isWorkTime ? 'Switch to Break' : 'Switch to Work';
+    toggleButton.textContent = isWorkTime ? 'work' : 'coffee';
     updateDisplay();
 }
 
@@ -70,4 +70,4 @@ toggleButton.addEventListener('click', toggleMode);
 
 // Initialize display
 updateDisplay();
-toggleButton.textContent = 'Switch to Break'; 
+toggleButton.textContent = 'work'; 
