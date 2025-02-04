@@ -23,6 +23,10 @@ body {
     color: #1e293b;
 }
 
+.controls {
+    margin-bottom: 1.5rem;
+}
+
 .controls button {
     font-size: 1rem;
     margin: 0 0.5rem;
@@ -43,6 +47,7 @@ body {
 
 .mode {
     margin-top: 1.5rem;
+    margin-bottom: 1rem;
     font-size: 1.1rem;
     color: #64748b;
     font-weight: 500;
@@ -81,4 +86,71 @@ body {
 
 #toggle-mode:hover {
     color: #1e293b;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Adjust the width to be smaller than the timer */
+    max-width: 300px; /* Maximum width for larger screens */
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#focus-submit {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+#focus-submit:hover {
+    background-color: #2563eb;
+}
+
+#focus-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Ensure the border is visible */
+    border-radius: 8px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-size: 1rem;
 } 
