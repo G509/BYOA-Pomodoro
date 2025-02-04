@@ -135,4 +135,32 @@ addFiveButton.addEventListener('click', addFiveMinutes);
 
 // Initialize display
 updateDisplay();
-toggleButton.textContent = 'work'; 
+toggleButton.textContent = 'work';
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('focus-modal');
+    const closeButton = document.querySelector('.close-button');
+    const focusInput = document.getElementById('focus-input');
+
+    // Function to close the modal
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    // Close modal when clicking the close button
+    closeButton.addEventListener('click', closeModal);
+
+    // Close modal when clicking outside of it
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close modal when pressing the Escape key
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeModal();
+        }
+    });
+}); 
